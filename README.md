@@ -11,6 +11,7 @@ What Insights did you want to discover?
 Discover how to balance study time across various topics and programs based on urgency and proficency Undersatnd how students allocate hours and prefer schedulling Test if motivational quotes boost engagement, encuraging consistent study habits.
 
 ##4.Aha! Moments:
+The application worked flawlessly and generated a personal schedule and random quote that felt nice.
 
 ##5.Solutions Offered
 
