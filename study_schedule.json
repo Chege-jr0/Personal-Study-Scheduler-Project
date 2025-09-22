@@ -1,9 +1,9 @@
 [
   {
     "topic": "math",
-    "weekly_hours": 7.0,
+    "weekly_hours": 32.0,
     "weeks": 11,
-    "total_hours": 77.0,
-    "priority": 5
+    "total_hours": 352.0,
+    "priority": 4
   }
 ]

@@ -2,6 +2,7 @@ import re
 import datetime
 import random
 import json
+from ics import Calendar, Event
 
 
 def get_motivational_quote():
@@ -73,14 +74,19 @@ def generate_schedule(topics_data, hours, deadline_date, priorities):
 
         return schedule      
 
-def save_schedule(schedule, priorities):
+def save_schedule(schedule, priorities, deadline_data):
      """ This function allows the schedule created to be stored in csv and json format """
      schedule_data = []
+     calendar = Calendar()
+     today = datetime.datetime.now().date()
+
+
      for topic, allocation in schedule.items():
           hours_match = re.search(r'(\d+\.?\d*)', allocation)
           weeks_match = re.search(r'(\d+) weeks', allocation)
           hours = float(hours_match.group(1)) if hours_match else 0
           weeks = int(weeks_match.group(1)) if weeks_match else 1
+
           schedule_data.append({
                 "topic": topic,
                 "weekly_hours": hours,
@@ -89,10 +95,22 @@ def save_schedule(schedule, priorities):
                 "priority": priorities.get(topic, 1)      
           })
 
+          for week in range(weeks):
+               start_date = today + datetime.timedelta(weeks = week)
+               event = Event()
+               event.name = f"Study: {topic.upper()} (Priority {priorities[topic]}/5)"
+               event.begin = datetime.datetime.combine(start_date, datetime.time(9,0))
+               event.duration = datetime.timedelta(hours=hours)
+               event.description = f"Weekly study session for {topic}.Allocated {hours} hrs."
+               calendar.events.add(event)
+
      with open("study_schedule.json", "w") as f:
           json.dump(schedule_data, f, indent=2)
 
-     return True, "Schedule saved to study_schedule.json"     
+     with open("study_schedule.ics", "w") as f:
+          f.write(str(calendar))     
+
+     return True, "Schedule saved to study_schedule.json and study_schedule.ics"     
         
 
 def main():
@@ -113,7 +131,7 @@ def main():
                priority = priorities[topic]
                print(f"{topic.upper()}: {allocation} (Priority: {priority}/5)")
 
-          save_sucess, save_message = save_schedule(schedule, priorities)
+          save_sucess, save_message = save_schedule(schedule, priorities, deadline_date)
           print(f"\n {save_message}")  
 
           quote = get_motivational_quote()
