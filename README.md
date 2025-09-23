@@ -1,4 +1,4 @@
-# PrepPal - A web Application
+# PrepPal - A Python Web Application
 
 Welcome to Prepal, a personal study planner that helps students manage study hours and meet tight deadlines
 
@@ -23,6 +23,8 @@ Like many learners in Tech in intensive programs especially those who are self l
    Specify the numbe of hours you can study per week(up to 40).
    Set your deadline(date by which you want to complete the study plan)
    Assign a priority level(1-5) for each topic where 5 = highest priority.
+<img width="400" height="400" alt="Screenshot 2025-09-23 201104" src="https://github.com/user-attachments/assets/c67b3481-0bfb-4d3c-9e8b-5b6afe83f1fc" />
+<img width="400" height="400" alt="Screenshot 2025-09-23 201216" src="https://github.com/user-attachments/assets/3b0bbc63-007b-4fcc-b0af-d62ac689a71c" />
 
 -**Schedule Generation**
    PrepPal calaculates how to distribute your weekly hours across topics based on your priorities.
@@ -40,8 +42,10 @@ Like many learners in Tech in intensive programs especially those who are self l
       (subject priority ÷ total priorities) × weekly hours for ecah subject and it is calculated accordingly
     
 
+
    The Schedule ensures higher priority subjects gets more study time.
-   The plan spans from tne current week until your deadline.
+   The plan spans from the current week until your deadline.
+   <img width="1208" height="857" alt="Screenshot 2025-09-23 201239" src="https://github.com/user-attachments/assets/57b9b0cd-b18f-4c5c-84c2-8451659e4a73" />
 
 **View and Download Your Plan**   
    The generated schedule is displayed in a clean table showing topics, hours per week, total hours, and priority.
