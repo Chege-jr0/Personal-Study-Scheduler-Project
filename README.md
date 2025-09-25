@@ -15,46 +15,50 @@ Welcome to Prepal, a personal study planner that helps students manage study hou
 - [Contact](#contact)
 
 ## Description
-Like many learners in Tech in intensive programs especially those who are self learning, it is hard to kepp track of yor progress and the topics you need to cover eg software engineering, data science or cybersecurity while meeting certain deadlines. Without a structured schedule, students often prioritize poorly and missing deadlines leading to burnout or incomplete coursework. A studennt may spend too much time on one topic and negelect another leading to poor skills. My project was to try to create a tool that automates scheduling and integrates to reduce stress and improve focus. It generates a JSON summary and an calendar file to integrate with Google Calendar, Outlook, or Apple Calendar.
+Like many learners in tech-intensive programs, especially those who are self-learning, it’s hard to keep track of your progress and the topics you need to cover e.g, software engineering, data science, or cybersecurity, while meeting certain deadlines. Without a structured schedule, students often prioritize poorly and miss deadlines, leading to burnout or incomplete coursework. A student may spend too much time on one topic and neglect another, leading to poor skills. My project was to create a tool that automates scheduling and integrates to reduce stress and improve focus. It generates a JSON summary and a calendar file to integrate with Google Calendar, Outlook, or Apple Calendar.
 
 ## How the Application works
 -**Input Your Study Details**
    Enter your topics (e.g, Math, Physics, Regex).
-   Specify the numbe of hours you can study per week(up to 40).
+   Specify the number of hours you can study per week(up to 40).
    Set your deadline(date by which you want to complete the study plan)
-   Assign a priority level(1-5) for each topic where 5 = highest priority.
+   Assign a priority level(1-5) for each topic, where 5 = highest priority.
+
+   
 <img width="400" height="400" alt="Screenshot 2025-09-23 201104" src="https://github.com/user-attachments/assets/c67b3481-0bfb-4d3c-9e8b-5b6afe83f1fc" />
 <img width="400" height="400" alt="Screenshot 2025-09-23 201216" src="https://github.com/user-attachments/assets/3b0bbc63-007b-4fcc-b0af-d62ac689a71c" />
 
+
+
 -**Schedule Generation**
-   PrepPal calaculates how to distribute your weekly hours across topics based on your priorities.
+   PrepPal calculates how to distribute your weekly hours across topics based on your priorities.
         
-    In the function generate schedule, the app starts by today,s date and your chosen deadline date.
+    In the function (generate schedule), the app starts with today's date and your chosen deadline date.
       start_date = datetime.datetime.now().date()
-    It calculates how many days remaining.
+    It calculates how many days are remaining.
       days = (deadline_date - start_date).days
     It then converts that into weeks(at least 1 week)  
       weeks = max(days // 7, 1)
     Each subject is assigned a priority value
     Total weight is calculated by the sum of all priorities.  
       total_weight = sum(priorities.values())
-    To get the weekly_hours, we perform the following operation
-      (subject priority ÷ total priorities) × weekly hours for ecah subject and it is calculated accordingly
+    To get the weekly hours, we perform the following operation
+      (subject priority ÷ total priorities) × weekly hours for each subject, and it is calculated accordingly
     
 
 
-   The Schedule ensures higher priority subjects gets more study time.
+   The Schedule ensures higher-priority subjects get more study time.
    The plan spans from the current week until your deadline.
    <img width="1208" height="857" alt="Screenshot 2025-09-23 201239" src="https://github.com/user-attachments/assets/57b9b0cd-b18f-4c5c-84c2-8451659e4a73" />
 
 **View and Download Your Plan**   
    The generated schedule is displayed in a clean table showing topics, hours per week, total hours, and priority.
-   You can download the plan in JSON format and you can export the schedule which creates weekly reccuring study events in your calendar.
+   You can download the plan in JSON format, and you can export the schedule, which creates weekly recurring study events in your calendar.
 
 **Calendar Intergration**
    Import the .ics file into your Google Calendar.
-   Each topic appears as a weekly reccuring event starting at 9AM with the allocated study hours
-   This keeps you accountable and remins you to stay on the track.   
+   Each topic appears as a weekly recurring event starting at 9AM with the allocated study hours.
+   This keeps you accountable and reminds you to stay on track.   
 
 
 ## Features
