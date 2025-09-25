@@ -1,6 +1,6 @@
 # PrepPal - A Python Web Application
 
-Welcome to Prepal, a personal study planner that helps students manage study hours and meet tight deadlines
+Welcome to Prepal, a personal study planner that helps students manage study hours and meet tight deadlines. Read more https://chege-paul.hashnode.dev/a-smart-study-planner-with-calendar-integration?showSharer=true
 
 ## Table of Contents
 - [Description](#description)
