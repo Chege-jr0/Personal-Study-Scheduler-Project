@@ -114,7 +114,7 @@ def save_schedule(schedule, priorities, deadline_data):
         
 
 def main():
-     """ This is the main function where everythin is executed """
+     """ This is the main function where the applicationis executed is executed """
      topics_data, hours, deadline_date, priorities = user_input_and_validate()
 
      if topics_data:
