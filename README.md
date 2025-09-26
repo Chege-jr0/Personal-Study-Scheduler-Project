@@ -15,7 +15,7 @@ Welcome to Prepal, a personal study planner that helps students manage study hou
 - [Contact](#contact)
 
 ## Description
-Like many learners in tech-intensive programs, especially those who are self-learning, it’s hard to keep track of your progress and the topics you need to cover e.g, software engineering, data science, or cybersecurity, while meeting certain deadlines. Without a structured schedule, students often prioritize poorly and miss deadlines, leading to burnout or incomplete coursework. A student may spend too much time on one topic and neglect another, leading to poor skills. My project was to create a tool that automates scheduling and integrates to reduce stress and improve focus. It generates a JSON summary and a calendar file to integrate with Google Calendar, Outlook, or Apple Calendar.
+Like many learners in tech-intensive programs, especially those who are self-learning, it’s hard to keep track of your progress and the topics you need to cover, e.g, software engineering, data science, or cybersecurity, while meeting certain deadlines. Without a structured schedule, students often prioritize poorly and miss deadlines, leading to burnout or incomplete coursework. A student may spend too much time on one topic and neglect another, leading to poor skills. My project was to create a tool that automates scheduling and integrates to reduce stress and improve focus. It generates a JSON summary and a calendar file to integrate with Google Calendar, Outlook, or Apple Calendar.
 
 ## How the Application works
 -**Input Your Study Details**
