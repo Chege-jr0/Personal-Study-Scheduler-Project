@@ -33,7 +33,7 @@ def user_input_and_validate():
              return False, None, None, None, None
          hours = int(hours_data)
          if hours > 40:
-              return False, None, None, None, None      
+              return None, None, None, None      
                      
          #Deadline
                
