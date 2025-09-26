@@ -12,7 +12,7 @@ def get_motivational_quote():
         "Keep learning, keep growing!",
         "As long as you show up, things will align!",
         "Stay curious, stay coding!"
-        "All play with no work makes jack a broke boy"
+        "All play, with no work makes jack a broke boy"
         ]
     return random.choice(quotes)
 
